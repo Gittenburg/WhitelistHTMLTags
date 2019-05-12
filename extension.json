@@ -1,0 +1,19 @@
+{
+	"name": "WhitelistHTMLTags",
+	"type": "parserhook",
+	"license-name": "MIT",
+	"author": "Gittenburg",
+	"url": "https://github.com/Gittenburg/WhitelistHTMLTags",
+	"version": "0.1.0",
+	"descriptionmsg": "Whitelist specific HTML tags.",
+	"config": {
+		"WhitelistedHTMLTags": []
+	},
+	"AutoloadClasses": {
+		"WhitelistHTMLTags": "WhitelistHTMLTags.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "WhitelistHTMLTags::onParserFirstCallInit"
+	},
+	"manifest_version": 1
+}
