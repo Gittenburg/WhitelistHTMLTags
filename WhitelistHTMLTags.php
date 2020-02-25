@@ -10,6 +10,7 @@ class WhitelistHTMLTags {
 	}
 
 	public static function renderTag($text, $args, $parser, $frame, $tag){
-		return "<$tag>".$parser->recursiveTagParse($text, $frame)."</$tag>";
+		return Html::openElement($tag, Sanitizer::validateTagAttributes($args, 'div'))
+			. $parser->recursiveTagParse($text, $frame) . Html::closeElement($tag);
 	}
 }
